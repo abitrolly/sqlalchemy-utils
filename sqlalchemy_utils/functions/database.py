@@ -392,6 +392,8 @@ def database_exists(url):
     database = url.database
     if url.drivername.startswith('postgres'):
         url.database = 'postgres'
+    elif url.drivername.startswith('mssql'):
+        url.database = 'master'
     else:
         url.database = None
 
@@ -399,6 +401,10 @@ def database_exists(url):
 
     if engine.dialect.name == 'postgresql':
         text = "SELECT 1 FROM pg_database WHERE datname='%s'" % database
+        return bool(get_scalar_result(engine, text))
+
+    elif engine.dialect.name == 'mssql':
+        text = "SELECT DB_ID('%s')" % database
         return bool(get_scalar_result(engine, text))
 
     elif engine.dialect.name == 'mysql':
