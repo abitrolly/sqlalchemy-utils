@@ -35,3 +35,6 @@ install:
 
 script:
   - tox
+
+after_success:
+  - curl -s https://codecov.io/bash | bash
