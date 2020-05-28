@@ -1,7 +1,7 @@
 SQLAlchemy-Utils
 ================
 
-|Build Status| |Version Status| |Downloads|
+|Build Status| |Version Status| |Downloads| |Coverage|
 
 
 Various utility functions, new data types and helpers for SQLAlchemy.
