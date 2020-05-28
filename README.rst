@@ -20,3 +20,5 @@ Resources
    :target: https://pypi.python.org/pypi/SQLAlchemy-Utils/
 .. |Downloads| image:: https://img.shields.io/pypi/dm/SQLAlchemy-Utils.svg
    :target: https://pypi.python.org/pypi/SQLAlchemy-Utils/
+.. |Coverage| image:: https://img.shields.io/codecov/c/github/kvesteri/sqlalchemy-utils/master
+   :target: https://codecov.io/gh/kvesteri/sqlalchemy-utils
